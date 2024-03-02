@@ -1,0 +1,139 @@
+
+/* Start General style */
+body{
+    direction:rtl;
+    text-align:right
+}
+.title-section{
+    position:relative;
+    display: inline-block;;
+}
+.title-section::after{
+    content:"";
+    position:absolute;
+    bottom:-15px;
+    right:0;
+    background-color: var(--warning);
+    width:110px;
+    height:4px;
+}
+.hero-image{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.my-active{
+    background-color: var(--warning);
+    border-color: var(--warning);
+    z-index:3;
+    color:white;
+}
+/* End General style */
+/* Start Home */
+.home img{
+    width:100%;
+    height:800px
+}
+@media (max-width:991px){
+    .home img{
+        height:400px;
+        max-height:100%;
+    }
+}
+.home .my-caption{
+    text-align:right;
+    bottom:50%;
+    transform: translateY(50%);
+}
+/* End Home */
+/* Start subscribe */
+.subscribe{
+    height:400px;
+    position:relative;
+    background-image: url('../images/subscribe.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.subscribe-item{
+    width:50%;
+}
+.subscribe-item .form-group:first-of-type{
+    width:100%;
+}
+@media (max-width:991px){
+    .subscribe-item{
+        width:100%
+    }
+}
+@media (min-width:992px){
+    .subscribe-item form{
+        display: flex;
+        justify-content: space-between;
+    }
+    .subscribe-item .form-group:first-of-type{
+        width:70%;
+    }
+}
+.myRounded{
+    border-radius: 20px;
+}
+/* End sbuscribe */
+/* Start Contact */
+.contact{
+    background-color: #071c33;
+}
+@media (max-width:991px){
+    .contact-item{
+        text-align:center
+    }
+}
+/* End Contact */
+/* Start footer */
+footer{
+    background-color: #04101e;
+}
+/* End footer */
+.fighter{
+    position:fixed;
+    left:1.5rem;
+    bottom:1.5rem;
+    background-color: var(--secondary);
+    padding:1rem;
+    transition:.5s
+}
+.fighter:hover{
+    background-color: var(--dark);
+}
+.fighter i{
+    color:var(--warning);
+    font-size:1.5rem;
+}
+/* start jumbotron */
+@media (min-width:576px){
+    .j-flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .j-bread{
+        font-size:1.2rem
+    }
+}
+/* End jumbotron */
+/* Start Blog */
+.blog .jumbotron{
+    border-bottom: 3px solid var(--warning)
+}
+@media(max-width:767px){
+    .page-md{
+        display:none;
+    }
+}
+.blog .my-list-group a:not(:first-of-type,:last-of-type){
+    border-bottom:0;
+}
+.blog .my-item:hover{
+    text-decoration: none;
+}
+/* End Blog */
